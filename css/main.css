@@ -1,0 +1,1402 @@
+/* IMPORT FONT*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700&display=swap");
+
+
+/*==========================================================================
+                            COMMON CSS
+===========================================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #abacae;
+  line-height: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #38424D;
+  margin: 0px;
+}
+
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #747E88;
+  margin: 0px;
+}
+
+.section-title .title {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .section-title .title {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .section-title .title {
+    font-size: 26px;
+  }
+}
+
+.section-title .text {
+  margin: 20px 0 0 0;
+}
+
+.bg-gray {
+  background: #ffffff;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 15px 40px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+
+.btn-common {
+  margin-top: 5%;
+  background-color: #01898C;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover {
+  background-color: #9cdaf8;
+  background-image: linear-gradient(315deg, #9cdaf8 0%, #98fcbd 74%);
+  color: #626b75;
+  border-color: transparent;
+}
+
+
+/*==========================================================================
+                            PRELOADER CSS
+===========================================================================*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999;
+}
+
+.loader {
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#loader-1:before,
+#loader-1:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 7px solid transparent;
+  border-top-color: #0898E7;
+}
+
+#loader-1:before {
+  z-index: 100;
+  animation: spin 2s infinite;
+}
+
+#loader-1:after {
+  border: 7px solid #fafafa;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*==========================================================================
+                            preloader css
+===========================================================================*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.preloader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.preloader-icon {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 0px;
+}
+
+.preloader-icon span {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: #35D4C1;
+  -webkit-animation: preloader-fx 1.6s linear infinite;
+  animation: preloader-fx 1.6s linear infinite;
+}
+
+.preloader-icon span:last-child {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+}
+
+@keyframes preloader-fx {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes preloader-fx {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+
+/*==========================================================================
+                            back to top
+===========================================================================*/
+
+/* ScrollToTop */
+a.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 15px;
+  text-decoration: none;
+}
+
+a.back-to-top i {
+  display: block;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #35D4C1;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+a.back-to-top:hover, a.back-to-top:focus {
+  text-decoration: none;
+}
+
+
+/*==========================================================================
+                            NAVBAR CSS
+===========================================================================*/
+
+.nav-bar {
+  overflow: hidden;
+  width: 100%;
+  
+}
+
+
+.sticky {
+  position: fixed;
+  background: #fff;
+  z-index: 999999;
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+  background: #fff !important;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+  padding-top: 10px;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #38424D;
+  position: relative;
+  float: right;
+  text-align: left;
+}
+
+.navbar-nav a:hover {
+  display: block;
+  text-decoration: #33C7B6 underline 2px;
+  text-underline-offset: 5px;
+  color: #33C7B6;
+}
+
+
+.navbar-nav .nav-item.active>a {
+  color: #33C7B6;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.04);;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 2px;
+  background-color: #222;
+  color: black;
+  display: block;
+  margin: 5px 0;
+}
+
+/*==========================================================================
+                          HOME SECTION CSS
+===========================================================================*/
+
+#home-area {
+  background-image: url(../img/home/wave-green-svg.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0px 0px;
+}
+
+#home-area .contents .head-title {
+  color: #222222;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #home-area .contents .head-title {
+    font-size: 36px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  #home-area .contents .head-title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #home-area .contents .head-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+#home-area .contents .head-title span {
+  display: contents;
+  color: #35D4C1;
+}
+
+
+.waveImg {
+  max-width: 85%;
+  height: 100%;
+}
+
+
+/*==========================================================================
+                          ABOUT SECTION OUR story timeline
+===========================================================================*/
+#our-story{
+  padding-top: 80px;
+}
+
+.story-title .title {
+  font-size: 35px;
+  font-weight: 600;
+}
+.story-title .text{
+  padding: 5px;
+}
+
+@media (max-width: 767px) {
+  .story-title .title {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .story-title .title {
+    font-size: 26px;
+  }
+}
+
+
+.wrapper{
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line{
+  position: absolute;
+  height: 100%;
+  background: #fff; 
+  width: 3px;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  border-left: 3px dashed #35D4C1;
+  
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row section{
+  background: #fff;
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  
+  position: relative;
+}
+/*.wrapper .row section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: rgba(53,212,193,0.08);
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}*/
+.row-1 section::before{
+  right: -7px;
+}
+.row-2 section::before{
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #33C7B6;
+  font-size: 20px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  font-size: 32px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon{
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon{
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title{
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #212B53;
+}
+.row section p{
+  margin: 10px 0 17px 0;
+}
+
+.row section .bottom a:hover{
+  transform: scale(0.97);
+}
+@media(max-width: 790px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section{
+    width: 100%;
+  }
+  .row-1 section::before{
+    left: -7px;
+  }
+  .row-1 section .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section{
+    width: 100%;
+  }
+  .row-1 section::before{
+    left: -7px;
+  }
+  .row-1 section .icon{
+    left: -60px;
+  }
+
+  .row section .details,
+.row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title{
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #212B53;
+}
+.row section p{
+  margin: 10px 0 17px 0;
+}
+}
+
+
+/*==========================================================================
+              What we do & who we are
+===========================================================================*/
+
+.shape {
+  height: 100px;
+  vertical-align: middle;
+  margin: 25px auto 20px;
+  position: relative;
+  width: 3px;
+  background-color: #33C7B6;
+}
+@media only screen and (max-width: 991px) {
+  .shape{
+  height: 3px;
+  margin: 20px auto 20px;
+  position: relative;
+  width: 150px;
+  background-color: #33C7B6;
+  }
+}
+
+
+#what{
+  background-color: #F2F7F7;
+  padding: 50px;
+}
+ 
+.what-title{
+  color: #212B53;
+  font-weight: 600;
+}
+.what-text{
+  padding-top: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  .what-title {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .what-title {
+    font-size: 26px;
+  }
+}
+
+
+
+/*==========================================================================
+              Steps to choose career section SECTION CSS
+===========================================================================*/
+#path {
+padding-top: 100px;
+}
+#features {
+  background: #fff;
+  padding-bottom: 100px;
+}
+
+.path-img {
+  display: block;
+  margin: auto;
+}
+
+#features .icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  text-align: center;
+  position: static;
+  z-index: 1;
+}
+
+#features .content-left span {
+  float: right;
+}
+
+#features .content-left .text {
+  text-align: right;
+}
+
+#features .content-right span {
+  float: left;
+}
+
+#features .box-item {
+  box-shadow: 0 0 12px #F4F4F4;
+  padding: 15px;
+  line-height: 2px;
+  margin-top: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  position: relative;
+  top: 0;
+}
+
+#features .box-item .icon {
+  text-align: center;
+  margin: 12px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#features .box-item .icon i {
+  color: #35d4c1;
+  font-size: 30px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#features .box-item .text h4 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#features .box-item .text p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+#features .box-item:hover {
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+}
+
+#features .box-item:hover h4 {
+  color: #35d4c1;
+}
+
+#features .show-box {
+  margin-top: 50px;
+}
+
+#features .show-box img {
+  width: 100%;
+}
+
+/*==========================================================================
+                            WHY SECTION CSS
+===========================================================================*/
+
+.services-area {
+  margin: 50px 0 100px 0;
+  background-color: #fff;
+}
+
+.single-services {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(154, 154, 154, 0.16);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(154, 154, 154, 0.16);
+  box-shadow: 0px 10px 10px 0px rgba(154, 154, 154, 0.16);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  padding: 45px 25px 35px;
+  height: 400px;
+  margin-top: 30px;
+}
+
+.single-services:hover {
+  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  background-color: #ffffff;
+}
+
+
+@media (max-width: 767px) {
+  .single-services {
+    padding: 40px 20px 30px;
+  }
+}
+
+.single-services .services-icon {
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+
+.single-services .services-icon i {
+  font-size: 46px;
+  line-height: 79px;
+  color: #fff;
+}
+
+.single-services .services-icon::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.single-services .services-content {
+  margin-top: 35px;
+}
+
+.single-services .services-content .services-title a {
+  font-size: 25px;
+  font-weight: 500;
+  color: #222;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .single-services .services-content .services-title a {
+    font-size: 20px;
+  }
+}
+
+.single-services .services-content .text {
+  margin-top: 30px;
+}
+
+.single-services.services-color-1 .services-icon {
+  background-color: #E7A019;
+}
+
+.single-services.services-color-1 .services-icon::before {
+  background-color: rgba(231, 160, 25, 0.2);
+}
+
+.single-services.services-color-1 .services-content .services-title a:hover {
+  color: #E7A019;
+}
+
+.single-services.services-color-2 .services-icon {
+  background-color: #E54F4F;
+}
+
+.single-services.services-color-2 .services-icon::before {
+  background-color: rgba(229, 79, 79, 0.2);
+}
+
+.single-services.services-color-2 .services-content .services-title a:hover {
+  color: #E54F4F;
+}
+
+.single-services.services-color-3 .services-icon {
+  background-color: #8950E4;
+}
+
+.single-services.services-color-3 .services-icon::before {
+  background-color: rgba(137, 80, 228, 0.2);
+}
+
+.single-services.services-color-3 .services-content .services-title a:hover {
+  color: #8950E4;
+}
+
+.single-services.services-color-4 .services-icon {
+  background-color: #0898E7;
+}
+
+.single-services.services-color-4 .services-icon::before {
+  background-color: rgba(8, 152, 231, 0.2);
+}
+
+.single-services.services-color-4 .services-content .services-title a:hover {
+  color: #0898E7;
+}
+
+
+/*==========================================================================
+                          REVIEW SECTION CSS
+===========================================================================*/
+
+.demo {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  background: #35D4C1;
+}
+
+.testimonial {
+  background: #fff;
+  text-align: center;
+  padding: 30px 30px 50px;
+  margin: 0 15px 100px;
+  position: relative;
+}
+
+.testimonial:before,
+.testimonial:after {
+  content: "";
+  border-top: 40px solid #fff;
+  border-right: 125px solid transparent;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonial:after {
+  border-right: none;
+  border-left: 125px solid transparent;
+  left: auto;
+  right: 0;
+}
+
+
+.testimonial .icon {
+  display: inline-block;
+  font-size: 80px;
+  color: #35D4C1;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.testimonial .description {
+  /* font-size: 15px;
+  color: #777; */
+  text-align: justify;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #747E88;
+}
+
+.testimonial .testimonial-content {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.testimonial .pic {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px #35D4C1;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.testimonial .pic img {
+  width: 100%;
+  height: auto;
+}
+
+.testimonial .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 0 0 5px 0;
+}
+
+.testimonial .post {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.owl-theme .owl-controls {
+  margin-top: 0;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  width: 32px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #35D4C1;
+  margin: 10px;
+  opacity: 1;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  background: #35D4C1;
+  border-color: #fff;
+}
+
+@media only screen and (max-width: 650px) and (min-width: 400px) {
+  .testimonial:before {
+    border-right: 325px solid transparent;
+  }
+
+  .testimonial:after {
+    border-left: 325px solid transparent;
+  }
+}
+
+@media(max-width:991px) {
+  .testi-img .img-box {
+    max-width: 300px;
+  }
+
+  .testi-img .circle {
+    height: 300px;
+    width: 300px;
+  }
+
+  .testi-img .img-box-inner {
+    border-radius: 0 0 150px 150px;
+  }
+
+  .testi-img .img-box-inner img {
+    max-width: 230px;
+  }
+}
+
+@media(max-width:767px) {
+  .testi-img {
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+/*======================================
+    Blog CSS
+========================================*/
+
+
+.blog-section .section-title {
+  margin-bottom: 50px;
+  padding-top: 100px;
+}
+
+.blog-section .sub-title{
+  padding-top: 10px;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .blog-section .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-section .section-title {
+    margin-bottom: 20px;
+  }
+}
+
+.blog-section .single-blog {
+  margin-top: 30px;
+  overflow: hidden !important;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.164);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.164);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.blog-section .single-blog .blog-img {
+  overflow: hidden;
+}
+
+.blog-section .single-blog .blog-img a {
+  width: 50%;
+}
+
+.blog-section .single-blog .blog-img img {
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.blog-section .single-blog:hover .blog-img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog-section .single-blog .blog-content {
+  padding: 30px;
+}
+
+.blog-section .single-blog .blog-content .category {
+  font-size: 14px;
+  color: #35D4C1;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-section .single-blog .blog-content h4 {
+  display: block;
+  margin-top: 5px;
+  line-height: 25px;
+}
+
+.blog-section .single-blog .blog-content h4 a {
+  font-size: 19px;
+  color: #081828;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.blog-section .single-blog .blog-content h4 a:hover {
+  color: #35D4C1;
+}
+
+.blog-section .single-blog .blog-content p {
+  display: block;
+  margin-top: 20px;
+}
+
+.blog-section .single-blog .blog-content .autor {
+  position: relative;
+  padding-left: 62px;
+  margin-top: 30px;
+}
+
+.blog-section .single-blog .blog-content .autor img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.blog-section .single-blog .blog-content .autor .name {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.blog-section .single-blog .blog-content .autor .name:hover {
+  color: #35D4C1;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content {
+  margin-left: 4px;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li {
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li a:hover {
+  color: #35D4C1;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li::before {
+  position: absolute;
+  content: "";
+  right: -5px;
+  top: 50%;
+  background-color: #d2d2d2;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-section .single-blog .blog-content .autor .meta-content li:last-child::before {
+  display: none;
+}
+
+.blog-list {
+  background: #f9f9f9;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blog-list .pagination {
+    margin-top: 20px;
+  }
+}
+
+.blog-list .single-blog {
+  margin: 0;
+}
+
+.blog-list .single-blog {
+  margin-bottom: 30px;
+}
+
+
+
+/*==========================================================================
+                          DOWNLOAD SECTION CSS
+===========================================================================*/
+
+.download-area {
+  margin-top: 100px;
+  background: #fff;
+
+}
+.download-img{
+  width: 80%;
+  height: auto;
+}
+
+
+/*
+.amazon-store {
+  margin-top: 30px;
+  width: 70%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .amazon-store {
+    width: 60%;
+    height: 65px
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .amazon-store {
+    width: 50%;
+    height: 50px
+  }
+}
+*/
+
+.play-store {
+  margin-top: 30px;
+  width: 70%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .play-store {
+    width: 60%;
+    height: 65px
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .play-store {
+    width: 50%;
+    height: 50px
+  }
+}
+
+/*==========================================================================
+                           FOOTER SECTION CSS
+===========================================================================*/
+
+.footer-area {
+  position: relative;
+  padding: 100px 0px 0px;
+  background: #fff;
+}
+
+
+.footer-area .footer-title {
+  font-size: 18px;
+  color: #333333;
+  font-weight: 500;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
+
+}
+
+.footer-area .footer-title span {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.footer-area .textwidget p {
+  padding-top: 10px;
+  color: #333;
+}
+
+.footer-area .footer-link li {
+  margin-bottom: 10px;
+
+}
+
+.footer-area .footer-link li a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  box-shadow: 0 10px 22px 13px rgba(10, 13, 17, 0.1);
+  background-color: #ffffff;
+  transform: translateY(-4px);
+  transition:0.3s;
+}
+
+.footer-area .footer-link li a:hover {
+  color: #33C7B6;
+}
+
+.footer-area .address li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.footer-area .address li a {
+  color: #666666;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-area .address li a i {
+  font-size: 22px;
+  width: 32px;
+  vertical-align: middle;
+  height: 36px;
+  text-align: center;
+  display: inline-block;
+
+  margin-right: 5px;
+  line-height: 32px;
+}
+
+.footer-area #subscribe-form {
+  margin-top: 10px;
+}
+
+.footer-area #subscribe-form .form-group {
+  position: relative;
+}
+
+.footer-area #subscribe-form .form-group .btn-common {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 15px;
+  height: 52px;
+  border-radius: 0;
+  background: transparent;
+  color: #0898E7;
+}
+
+#copyright .copyright-content {
+  border-top: 1px solid #d5d4e9;
+  padding: 15px 0;
+  margin: 45px 0 0px;
+}
+
+#copyright p {
+  line-height: 42px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+#copyright p a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#copyright p a:hover{
+  color: #33C7B6;
+}
+
+.social-icon a {
+  color: #272727;
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  line-height: 34px;
+  display: inline-block;
+  text-align: left;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 15px 6px 12px 4px;
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.social-icon a:hover {
+  color: #3504C1 !important;
+}
+
